@@ -1,113 +1,145 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 :root {
-    --text-color: #FFF;
-    --text-color2: #000;
-    --bg: #ff9ee1;
-    --margin: 4rem;
-    --otherbg: #ff7dd7;
+  --text-color: #fff;
+  --text-color2: #000;
+  --bg: #ff9ee1;
+  --margin: 4rem;
+  --otherbg: #ff7dd7;
 }
 * {
-    align-content: center;
-    border: none;
-    text-align: center;
-    box-sizing: border-box;
-    outline: none;
-    color: var(--text-color);
-    font-family: "Open Sans", sans-serif;
+  align-content: center;
+  border: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  color: var(--text-color);
+  font-family: "Open Sans", sans-serif;
 }
 body {
-    margin: 0;
-    padding: 0;
-    background: var(--bg);
-    color: var(--text-color);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text-color);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 footer {
-    background: var(--otherbg); 
-    display: flex;
-    border-bottom: none;
-    width: 100%;
-    padding: 0.7rem;
-    z-index: 1;
-    text-align: center;
-    text-decoration: none;
-    justify-content: center;
-    font-weight: 700;
+  background: var(--otherbg);
+  display: flex;
+  border-bottom: none;
+  width: 100%;
+  padding: 0.7rem;
+  z-index: 1;
+  text-align: center;
+  text-decoration: none;
+  justify-content: center;
+  font-weight: 700;
 }
 header {
-    background: var(--otherbg); 
-    display: flex;
-    border-bottom: none;
-    width: 100%;
-    z-index: 1;
-    text-align: center;
-    text-decoration: none;
-    justify-content: center;
-    font-weight: 700;
+  background: var(--otherbg);
+  display: flex;
+  border-bottom: none;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  text-decoration: none;
+  justify-content: center;
+  font-weight: 700;
 }
 header {
-    top: 0;
-    position: fixed;
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0 5px 10px var(--otherbg);
+  top: 0;
+  position: fixed;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 5px 10px var(--otherbg);
 }
 header form {
-    padding: 0.7rem;
-    padding-top: 1.99rem;
+  color: var(--text-color2);
+  margin-top: 0.99rem;
+}
+#uv-address {
+  color: black;
 }
 footer {
-    bottom: 0;
-    border-radius: 20px 20px 0 0;
-    box-shadow: 0 -5px 10px var(--uibg);
+  bottom: 0;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -5px 10px var(--uibg);
 }
 footer.noscroll {
-    position: fixed;
-    overflow: hidden;
+  position: fixed;
+  overflow: hidden;
 }
-footer a, footer a:visited, header a, header a:visited {
-    margin-right: 1.25rem;
-    margin-left: 1.25rem;
-	text-decoration: none;
+footer a,
+footer a:visited,
+header a,
+header a:visited {
+  margin-right: 1.25rem;
+  margin-left: 1.25rem;
+  text-decoration: none;
 }
 
-footer a:hover, header a:hover {
-    text-shadow: 2px 2px 6px var(--textcolor);
+footer a:hover,
+header a:hover {
+  text-shadow: 2px 2px 6px var(--textcolor);
 }
 main {
-    text-align: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    height: auto;
-    width: 90%;
-    flex-wrap: wrap;
-    margin: auto;
-    margin-top: var(--margin);
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  height: auto;
+  width: 90%;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: var(--margin);
+}
+h1,
+h2,
+h3,
+p,
+a,
+label {
+  margin: 0;
+  padding: 0;
+  text-shadow: var(--shadow);
+}
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 42px;
+}
+h3 {
+  font-size: 20px;
+}
+p,
+a {
+  font-size: 16px;
 }
 .samerow {
-    display: flex;
-    justify-content: center;
-    gap: 0;
-    flex-wrap: wrap;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+  align-items: center;
 }
 @media only screen and (max-width: 768px) {
-    header,footer {
-        align-items: center;
-        flex-direction: column;
-    }
-    header {
-        border-radius: 0;
-    }
-    footer {
-        border-radius: 0;
-    }
-	* {
-		--margin: 12rem;
-	}
+  * {
+    --margin: 12rem;
+  }
+  header,
+  footer {
+    align-items: center;
+    flex-direction: column;
+  }
+  header {
+    border-radius: 0;
+  }
+  footer {
+    border-radius: 0;
+  }
 }
