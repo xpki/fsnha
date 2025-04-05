@@ -1,11 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-
+@keyframes loadInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 100;
+	}
+}
 :root {
   --text-color: #fff;
   --text-color2: #000;
   --bg: #ff9ee1;
   --margin: 4rem;
   --otherbg: #ff7dd7;
+  --inputbg: #d679f2;
+	--inputborder: #ca6ce6;
 }
 * {
   align-content: center;
@@ -59,9 +68,7 @@ header form {
   color: var(--text-color2);
   margin-top: 0.99rem;
 }
-#uv-address {
-  color: black;
-}
+
 footer {
   bottom: 0;
   border-radius: 20px 20px 0 0;
@@ -85,16 +92,17 @@ header a:hover {
   text-shadow: 2px 2px 6px var(--textcolor);
 }
 main {
+  animation: 1.25s ease-in-out 0s 1 loadInAnimation;
+	align-items: center;
+	flex-direction: column;
+	display: flex;
+	gap: 0;
+	flex-wrap: wrap;
+	margin: auto;
+	margin-top: var(--margin);
+	width: 90%;
+	height:auto;
   text-align: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  height: auto;
-  width: 90%;
-  flex-wrap: wrap;
-  margin: auto;
-  margin-top: var(--margin);
 }
 h1,
 h2,
@@ -104,7 +112,7 @@ a,
 label {
   margin: 0;
   padding: 0;
-  text-shadow: var(--shadow);
+  text-shadow: var(--otherbg);
 }
 h1 {
   font-size: 60px;
@@ -126,6 +134,59 @@ a {
   gap: 0;
   flex-wrap: wrap;
   align-items: center;
+}
+input[type="text"] {
+	box-sizing: border-box;
+	text-align: center;
+	outline: none;
+	transition: opacity 0.25s ease-in-out;
+	opacity: 100%;
+  color: black;
+}
+input[type="text"]:hover {
+	opacity: 80%;
+}
+.game {
+  animation: 0.9s ease-in-out 0s 1 loadInAnimation;
+  background-color: transparent;
+  border-radius: 10px;
+  display: inline-block;
+  height: 200px;
+  width: 180px;
+  margin: 10px;
+  padding: 10px;
+}
+.game:hover {
+  opacity: 80%;
+}
+.game a {
+  font-size: 60%; 
+}
+.games {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+#searchResults {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.game img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  min-width: 100%;
+  object-fit: cover;
+  height: 150px;
+}
+#uv-address,
+select {
+  color: black;
 }
 @media only screen and (max-width: 768px) {
   * {
