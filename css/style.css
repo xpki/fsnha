@@ -12,7 +12,7 @@
   --text-color2: #000;
   --bg: #ff9ee1;
   --margin: 4rem;
-  --otherbg: #ff7dd7;
+  --otherbg: #ff75d5;
   --inputbg: #d679f2;
 	--inputborder: #ca6ce6;
 }
@@ -142,6 +142,8 @@ input[type="text"] {
 	transition: opacity 0.25s ease-in-out;
 	opacity: 100%;
   color: black;
+  border-radius: 3px;
+  font-size: 14px;
 }
 input[type="text"]:hover {
 	opacity: 80%;
@@ -185,6 +187,7 @@ input[type="text"]:hover {
   height: 150px;
 }
 #uv-address,
+option,
 select {
   color: black;
 }
